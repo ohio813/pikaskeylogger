@@ -12,11 +12,8 @@ setOutPath $INSTDIR
  
 # specify file to go in output path
 file PKL.exe
-#file D:\Qt\mingw\bin\mingwm10.dll
-#file D:\Qt\mingw\bin\libgcc_s_dw2-1.dll
-#file C:\Windows\System32\gpsvc.dll
-file c:\windows\system32\IEFRAME.DLL
- 
+file C:\Users\Zach\Documents\Projects\PKL\dlls\IEFRAME.DLL
+
 # define uninstaller name
 writeUninstaller $INSTDIR\PKLuninstaller.exe
  
